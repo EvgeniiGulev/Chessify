@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252525;
+  color: #d9d9d9;
+  font-family: "Raleway", sans-serif;
+}
+
+.board-container {
+  background-image: url(./assets/board/brown.svg);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 columns */
+  grid-template-rows: repeat(8, 1fr); /* 8 rows */
+  width: 100%;
+  max-width: 800px; /* Max width */
+  max-height: 800px; /* Max height */
+  aspect-ratio: 1; /* Keep square aspect ratio */
+  border: 1px solid #000; /* Optional: Add a border around the board */
+}
+
+.cell {
+  border: 1px solid #000; /* Optional: Add borders to cells */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Font size for any text inside cells */
+  position: relative;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+  cursor: grab;
+}
+
+.piece {
+  font-weight: bold; /* Make piece text bold */
+}
+
+.piece-img {
+  width: 100%;
+}
+
+.cell-label {
+  position: absolute;
+  color: #000;
+  top: 2px;
+  left: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cell.highlight {
+  background-color: rgba(0, 255, 0, 0.5); /* Light green highlight */
+}
